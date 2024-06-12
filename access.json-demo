@@ -1,0 +1,6 @@
+{
+    "users": [123],
+    "auth": ["abc"],
+    "webhook_port": 1234,
+    "websocket_port": 1235
+}
