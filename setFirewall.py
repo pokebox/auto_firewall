@@ -92,7 +92,7 @@ def modify_ip_fw(ipset_name, ip):
             for j in range(i + 1, len(lines)):
                 if lines[j].startswith('['):  # End of the current section
                     break
-                if ip in lines[j]:
+                if ip == lines[j]:
                     ip_exists = True
                     break
         if rules_pattern.match(line):
@@ -140,7 +140,7 @@ def delete_ip_fw(ipset_name, ip):
             for j in range(i + 1, len(lines)):
                 if lines[j].startswith('['):  # End of the current section
                     break
-                if ip in lines[j]:
+                if ip == lines[j]:
                     ip_found = True
                     lines.pop(j)
                     break
